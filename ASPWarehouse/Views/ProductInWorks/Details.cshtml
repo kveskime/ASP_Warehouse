@@ -1,0 +1,42 @@
+﻿@model Domain.ProductInWork
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProductInWork</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkType.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkType.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductInWorkId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
