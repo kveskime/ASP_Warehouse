@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using Domain;
+using Domain.Models;
 
 namespace DAL
 {
@@ -45,6 +46,13 @@ namespace DAL
         public IWorkTypeRepository WorkTypes => GetRepo<IWorkTypeRepository>();
         public IProductInWarehouseRepository ProductInWarehouses => GetRepo<IProductInWarehouseRepository>();
         public IWarehouseRepository Warehouses => GetRepo<IWarehouseRepository>();
+
+        //Identity
+        public IUserIntRepository UsersInt => GetRepo<IUserIntRepository>();
+        public IUserRoleIntRepository UserRolesInt => GetRepo<IUserRoleIntRepository>();
+        public IRoleIntRepository RolesInt => GetRepo<IRoleIntRepository>();
+        public IUserClaimIntRepository UserClaimsInt => GetRepo<IUserClaimIntRepository>();
+        public IUserLoginIntRepository UserLoginsInt => GetRepo<IUserLoginIntRepository>();
 
         // calling standard EF repo provider
         private IEFRepository<T> GetStandardRepo<T>() where T : class

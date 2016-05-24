@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using DAL.Interfaces;
 using DAL.Migrations;
 using Domain;
+using Domain.Models;
 
 namespace DAL
 {

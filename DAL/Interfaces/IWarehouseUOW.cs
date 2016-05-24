@@ -28,7 +28,13 @@ namespace DAL.Interfaces
         IWorkTypeRepository WorkTypes { get; }
         IProductInWarehouseRepository ProductInWarehouses { get; }
         IWarehouseRepository Warehouses { get; }
-         
+        //Identity
+        IUserIntRepository UsersInt { get; }
+        IUserRoleIntRepository UserRolesInt { get; }
+        IRoleIntRepository RolesInt { get; }
+        IUserClaimIntRepository UserClaimsInt { get; }
+        IUserLoginIntRepository UserLoginsInt { get; }
+
 
 
     }

@@ -38,6 +38,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.4\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -62,7 +70,13 @@
     <Compile Include="Interfaces\IProductTypeRepository.cs" />
     <Compile Include="Interfaces\IPurchaseRepository.cs" />
     <Compile Include="Interfaces\IPurchaseUOW.cs" />
+    <Compile Include="Interfaces\IRoleRepository.cs" />
     <Compile Include="Interfaces\ISupplierRepository.cs" />
+    <Compile Include="Interfaces\IUserClaimRepository.cs" />
+    <Compile Include="Interfaces\IUserLoginRepository.cs" />
+    <Compile Include="Interfaces\IUserNameResolver.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Interfaces\IUserRoleRepository.cs" />
     <Compile Include="Interfaces\IWarehouseRepository.cs" />
     <Compile Include="Interfaces\IWarehouseUOW.cs" />
     <Compile Include="Interfaces\IWorkTypeRepository.cs" />
@@ -71,6 +85,7 @@
       <DependentUpon>201605211900084_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MigrationConfiguration.cs" />
+    <Compile Include="NLogCommandInterceptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseUOW.cs" />
     <Compile Include="Repositories\EFRepository.cs" />
@@ -80,7 +95,12 @@
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\ProductTypeRepository.cs" />
     <Compile Include="Repositories\PurchaseRepository.cs" />
+    <Compile Include="Repositories\RoleRepository.cs" />
     <Compile Include="Repositories\SupplierRepository.cs" />
+    <Compile Include="Repositories\UserClaimRepository.cs" />
+    <Compile Include="Repositories\UserLoginRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\UserRoleRepository.cs" />
     <Compile Include="Repositories\WarehouseRepository.cs" />
     <Compile Include="Repositories\WorkTypeRepository.cs" />
     <Compile Include="WarehouseDbContext.cs" />

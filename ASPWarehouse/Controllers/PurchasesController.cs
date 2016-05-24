@@ -10,6 +10,7 @@ using ASPWarehouse.ViewModels;
 using DAL;
 using DAL.Interfaces;
 using Domain;
+using Domain.Models;
 
 namespace ASPWarehouse.Controllers
 {

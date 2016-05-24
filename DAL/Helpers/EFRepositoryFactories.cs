@@ -40,7 +40,12 @@ namespace DAL.Helpers
                     {typeof(IWarehouseRepository), dbContext => new WarehouseRepository(dbContext)},
                     {typeof(IProductInPurchaseRepository), dbContext => new ProductInPurchaseRepository(dbContext)},
                     {typeof(ISupplierRepository), dbContext => new SupplierRepository(dbContext)},
-                    {typeof(IPurchaseRepository), dbContext => new PurchaseRepository(dbContext)}
+                    {typeof(IPurchaseRepository), dbContext => new PurchaseRepository(dbContext)},
+                    {typeof (IUserIntRepository), dbContext => new UserIntRepository(dbContext)},
+                    {typeof (IUserRoleIntRepository), dbContext => new UserRoleIntRepository(dbContext)},
+                    {typeof (IUserClaimIntRepository), dbContext => new UserClaimIntRepository(dbContext)},
+                    {typeof (IUserLoginIntRepository), dbContext => new UserLoginIntRepository(dbContext)},
+                    {typeof (IRoleIntRepository), dbContext => new RoleIntRepository(dbContext)},
 
                 };
         }
