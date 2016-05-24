@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
 {
-    public class WorkType
+    public class WorkType : BaseEntity
     {
         public int WorkTypeId { get; set; }
         [MaxLength(128)]

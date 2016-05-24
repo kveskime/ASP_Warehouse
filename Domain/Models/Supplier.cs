@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
 {
-    public class Supplier
+    public class Supplier : BaseEntity
     {
         public int SupplierId { get; set; }
         [MaxLength(128)]

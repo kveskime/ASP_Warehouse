@@ -49,7 +49,6 @@ namespace Domain.Identity
 
 
         //Additional (custom) properties
-        public virtual List<Product> Products { get; set; }
 
     }
 

@@ -2,7 +2,7 @@
 
 namespace Domain.Models
 {
-    public class ProductInWarehouse
+    public class ProductInWarehouse : BaseEntity
     {
         public int ProductInWarehouseId { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace Domain.Models
 {
-    public class ProductInPurchase
+    public class ProductInPurchase : BaseEntity
     {
         public int ProductInPurchaseId { get; set; }
         [MaxLength(128)]

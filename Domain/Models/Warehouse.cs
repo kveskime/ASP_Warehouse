@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
 {
-    public class Warehouse
+    public class Warehouse : BaseEntity
     {
         public int WarehouseId { get; set; }
         [MaxLength(128)]

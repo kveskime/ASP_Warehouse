@@ -59,6 +59,7 @@
     <Compile Include="Identity\UserClaim.cs" />
     <Compile Include="Identity\UserLogin.cs" />
     <Compile Include="Identity\UserRole.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductInPurchase.cs" />
     <Compile Include="Models\ProductInWarehouse.cs" />

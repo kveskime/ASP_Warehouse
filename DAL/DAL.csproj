@@ -42,6 +42,10 @@
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.3.4\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
@@ -60,6 +64,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Helpers\EFRepositoryFactories.cs" />
     <Compile Include="Helpers\EFRepositoryProvider.cs" />
+    <Compile Include="Helpers\FormattedDbEntityValidationException.cs" />
     <Compile Include="Interfaces\IDbContext.cs" />
     <Compile Include="Interfaces\IEFRepository.cs" />
     <Compile Include="Interfaces\IEFRepositoryProvider.cs" />
@@ -103,6 +108,7 @@
     <Compile Include="Repositories\UserRoleRepository.cs" />
     <Compile Include="Repositories\WarehouseRepository.cs" />
     <Compile Include="Repositories\WorkTypeRepository.cs" />
+    <Compile Include="UserNameResolver.cs" />
     <Compile Include="WarehouseDbContext.cs" />
     <Compile Include="WarehouseUOW.cs" />
   </ItemGroup>

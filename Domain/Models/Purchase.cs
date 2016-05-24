@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
 {
-    public class Purchase
+    public class Purchase : BaseEntity
     {
         public int PurchaseId { get; set; }
         [MaxLength(128)]
