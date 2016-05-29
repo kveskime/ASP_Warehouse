@@ -61,7 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EFConfiguration\RoleMap.cs" />
+    <Compile Include="EFConfiguration\ServiceMap.cs" />
+    <Compile Include="EFConfiguration\UserClaimMap.cs" />
+    <Compile Include="EFConfiguration\UserLoginMap.cs" />
+    <Compile Include="EFConfiguration\UserMap.cs" />
+    <Compile Include="EFConfiguration\UserRoleMap.cs" />
     <Compile Include="Helpers\EFRepositoryFactories.cs" />
     <Compile Include="Helpers\EFRepositoryProvider.cs" />
     <Compile Include="Helpers\FormattedDbEntityValidationException.cs" />
@@ -88,6 +93,14 @@
     <Compile Include="Migrations\201605211900084_InitialMigration.cs" />
     <Compile Include="Migrations\201605211900084_InitialMigration.Designer.cs">
       <DependentUpon>201605211900084_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605271425287_UpdatedDbModel.cs" />
+    <Compile Include="Migrations\201605271425287_UpdatedDbModel.Designer.cs">
+      <DependentUpon>201605271425287_UpdatedDbModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605291341337_AddedIdentitySupport.cs" />
+    <Compile Include="Migrations\201605291341337_AddedIdentitySupport.Designer.cs">
+      <DependentUpon>201605291341337_AddedIdentitySupport.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MigrationConfiguration.cs" />
     <Compile Include="NLogCommandInterceptor.cs" />
@@ -117,6 +130,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAnnotations\DataAnnotations.csproj">
+      <Project>{42A1912C-1BBB-497C-8D34-5FC3125FD384}</Project>
+      <Name>DataAnnotations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{23ff86bc-85d0-418e-ab70-8ed53e7c926c}</Project>
       <Name>Domain</Name>
@@ -125,6 +142,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201605211900084_InitialMigration.resx">
       <DependentUpon>201605211900084_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605271425287_UpdatedDbModel.resx">
+      <DependentUpon>201605271425287_UpdatedDbModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605291341337_AddedIdentitySupport.resx">
+      <DependentUpon>201605291341337_AddedIdentitySupport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

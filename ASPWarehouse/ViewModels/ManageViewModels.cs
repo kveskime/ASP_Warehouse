@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Resources;
 
-namespace Web.ViewModels
+namespace ASPWarehouse.ViewModels
 {
     public class IndexViewModel
     {

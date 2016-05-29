@@ -7,10 +7,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAnnotations;
+using DAL.EFConfiguration;
 using DAL.Helpers;
 using DAL.Interfaces;
 using DAL.Migrations;
 using Domain;
+using Domain.Identity;
 using Domain.Models;
 using NLog;
 
@@ -54,8 +57,23 @@ namespace DAL
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<WorkType> WorkTypes { get; set; }
 
+        public DbSet<RoleInt> RolesInt { get; set; }
+        public DbSet<UserClaimInt> UserClaimsInt { get; set; }
+        public DbSet<UserLoginInt> UserLoginsInt { get; set; }
+        public DbSet<UserInt> UsersInt { get; set; }
+        public DbSet<UserRoleInt> UserRolesInt { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            // Identity, PK - int 
+            modelBuilder.Configurations.Add(new RoleIntMap());
+            modelBuilder.Configurations.Add(new UserClaimIntMap());
+            modelBuilder.Configurations.Add(new UserLoginIntMap());
+            modelBuilder.Configurations.Add(new UserIntMap());
+            modelBuilder.Configurations.Add(new UserRoleIntMap());
+
+            Precision.ConfigureModelBuilder(modelBuilder);
+
             // convert all datetime and datetime? properties to datetime2 in ms sql
             // ms sql datetime has min value of 1753-01-01 00:00:00.000
             modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));

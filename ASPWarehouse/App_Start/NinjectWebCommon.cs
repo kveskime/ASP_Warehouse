@@ -1,6 +1,10 @@
 using DAL;
 using DAL.Helpers;
 using DAL.Interfaces;
+using Domain.Identity;
+using Identity;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ASPWarehouse.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(ASPWarehouse.App_Start.NinjectWebCommon), "Stop")]
@@ -66,11 +70,27 @@ namespace ASPWarehouse.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IDbContext>().To<WarehouseDbContext>().InRequestScope();
-
             kernel.Bind<EFRepositoryFactories>().To<EFRepositoryFactories>().InSingletonScope();
             kernel.Bind<IEFRepositoryProvider>().To<EFRepositoryProvider>().InRequestScope();
             kernel.Bind<IPurchaseUOW>().To<PurchaseUOW>().InRequestScope();
             kernel.Bind<IWarehouseUOW>().To<WarehouseUOW>().InRequestScope();
+
+
+
+            kernel.Bind<IUserStore<User>>().To<UserStore>().InRequestScope();
+            kernel.Bind<IRoleStore<Role>>().To<RoleStore>();
+            kernel.Bind<IUserStore<UserInt, int>>().To<UserStoreInt>().InRequestScope();
+            kernel.Bind<IRoleStore<RoleInt, int>>().To<RoleStoreInt>().InRequestScope();
+
+
+
+            kernel.Bind<ApplicationSignInManager>().To<ApplicationSignInManager>().InRequestScope();
+            kernel.Bind<ApplicationUserManager>().To<ApplicationUserManager>().InRequestScope();
+            kernel.Bind<ApplicationRoleManager>().To<ApplicationRoleManager>().InRequestScope();
+
+            kernel.Bind<IAuthenticationManager>().ToMethod(a => HttpContext.Current.GetOwinContext().Authentication).InRequestScope();
+
+            kernel.Bind<NLog.ILogger>().ToMethod(a => NLog.LogManager.GetCurrentClassLogger());
 
 
         }
