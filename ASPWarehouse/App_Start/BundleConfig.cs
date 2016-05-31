@@ -60,10 +60,13 @@ namespace ASPWarehouse
 
 
             //Template bundles : 
-            bundles.Add(new ScriptBundle("~/bundles/html5shiv").Include("~/Scripts/html5shiv.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/headroom").Include("~/Scripts/headroom.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/html5shiv").Include("~/Scripts/html5shiv.js"));
             bundles.Add(new ScriptBundle("~/bundles/google-maps").Include("~/Scripts/google-map.js"));
+            bundles.Add(new ScriptBundle("~/bundles/headroom-jQuery").Include("~/Scripts/jQuery.headroom.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/headroom").Include("~/Scripts/headroom.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/template").Include("~/Scripts/template.js"));
+
 
 
             BundleTable.EnableOptimizations = false;
