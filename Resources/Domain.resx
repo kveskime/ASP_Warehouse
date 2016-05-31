@@ -117,46 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ArticleBody" xml:space="preserve">
-    <value>Body</value>
-  </data>
-  <data name="ArticleHeadline" xml:space="preserve">
-    <value>Headline</value>
-  </data>
-  <data name="FirstLastname" xml:space="preserve">
-    <value>First, Lastname</value>
-  </data>
-  <data name="LastFirstname" xml:space="preserve">
-    <value>Last, Firstname</value>
-  </data>
   <data name="EntityPrimaryKey" xml:space="preserve">
     <value>Id</value>
-  </data>
-  <data name="ContactTypeNameLengthError" xml:space="preserve">
-    <value>Contact type name too long.</value>
-  </data>
-  <data name="ContactValueLengthError" xml:space="preserve">
-    <value>Contact too long.</value>
-  </data>
-  <data name="Firstname" xml:space="preserve">
-    <value>First name</value>
-  </data>
-  <data name="FirstnameLengthError" xml:space="preserve">
-    <value>First name too long.</value>
-  </data>
-  <data name="Lastname" xml:space="preserve">
-    <value>Last name</value>
-  </data>
-  <data name="LastnameLengthError" xml:space="preserve">
-    <value>Last name too long.</value>
-  </data>
-  <data name="Person_Date2" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="Person_DateTime2" xml:space="preserve">
-    <value>Date and Time</value>
-  </data>
-  <data name="Person_Time2" xml:space="preserve">
-    <value>Time</value>
   </data>
 </root>

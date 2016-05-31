@@ -115,6 +115,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to User panel.
+        /// </summary>
+        public static string User_Panel {
+            get {
+                return ResourceManager.GetString("User_Panel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code.
         /// </summary>
         public static string VerifyCodeViewModel_Code {
@@ -210,6 +219,24 @@ namespace Resources {
         public static string ViewModel_RememberMe {
             get {
                 return ResourceManager.GetString("ViewModel_RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        public static string ViewModel_UserName {
+            get {
+                return ResourceManager.GetString("ViewModel_UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username is required..
+        /// </summary>
+        public static string ViewModel_UserNameRequired {
+            get {
+                return ResourceManager.GetString("ViewModel_UserNameRequired", resourceCulture);
             }
         }
     }

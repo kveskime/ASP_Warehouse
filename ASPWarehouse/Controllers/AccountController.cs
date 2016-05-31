@@ -12,6 +12,7 @@ using Microsoft.Owin.Security;
 using NLog;
 using Web.ViewModels;
 using ASPWarehouse.Controllers;
+using ASPWarehouse.ViewModels;
 
 namespace Web.Controllers
 {

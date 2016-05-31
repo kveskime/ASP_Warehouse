@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Resources;
 
-namespace Web.ViewModels
+namespace ASPWarehouse.ViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {

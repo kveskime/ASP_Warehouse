@@ -117,52 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ApplicationName" xml:space="preserve">
-    <value>MinuRakendus</value>
-  </data>
-  <data name="Cancel" xml:space="preserve">
-    <value>Katkesta</value>
-  </data>
-  <data name="Login" xml:space="preserve">
+  <data name="Login_ButtonLogin" xml:space="preserve">
     <value>Logi sisse</value>
   </data>
-  <data name="LogOff" xml:space="preserve">
-    <value>Logi välja</value>
+  <data name="Login_Title" xml:space="preserve">
+    <value>Logi sisse</value>
   </data>
-  <data name="ManageAccount" xml:space="preserve">
-    <value>Halda kontot</value>
+  <data name="Login_UseLocalAccountToLogin" xml:space="preserve">
+    <value>Kasuta lokaalset kontot sisselogimiseks</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>Järgmine</value>
+  <data name="RegisterButtonRegister" xml:space="preserve">
+    <value>Registreeri</value>
   </data>
-  <data name="OK" xml:space="preserve">
-    <value>OK</value>
+  <data name="RegisterCreateNewAccount" xml:space="preserve">
+    <value>Loo uus kasutaja</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Eelmine</value>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Registreeri!</value>
   </data>
-  <data name="Register" xml:space="preserve">
-    <value>Registreeru</value>
+  <data name="User_Panel" xml:space="preserve">
+    <value>Kasutaja sätted</value>
   </data>
-  <data name="Submit" xml:space="preserve">
-    <value>Kinnita</value>
+  <data name="VerifyCodeViewModel_Code" xml:space="preserve">
+    <value>Kood</value>
   </data>
-  <data name="FieldIsRequired" xml:space="preserve">
-    <value>Väli {0} on kohustuslik.</value>
+  <data name="VerifyCodeViewModel_RememberBrowser" xml:space="preserve">
+    <value>Tuttav brauser?</value>
   </data>
-  <data name="FieldMaxLength" xml:space="preserve">
-    <value>Väli {0} peab olema maksimaalse pikkusega &amp;#39;{1}&amp;#39;.</value>
+  <data name="ViewModel_ConfirmPassword" xml:space="preserve">
+    <value>Kinnita parool</value>
   </data>
-  <data name="FieldMinLength" xml:space="preserve">
-    <value>Väli {0} peab olema minimaalse pikkusega &amp;#39;{1}&amp;#39;.</value>
+  <data name="ViewModel_ConfirmPasswordNoMatch" xml:space="preserve">
+    <value>Parool ja parooli kinnitus ei ühti.</value>
   </data>
-  <data name="FieldMustBeDataTypeDate" xml:space="preserve">
-    <value>Väli {0} peab olema kuupäev.</value>
+  <data name="ViewModel_Email" xml:space="preserve">
+    <value>Email</value>
   </data>
-  <data name="FieldMustBeDataTypeDateTime" xml:space="preserve">
-    <value>Väli {0} peab sisaldama kuupäeva ja kellaaega.</value>
+  <data name="ViewModel_EmailInvalid" xml:space="preserve">
+    <value>Emaili süntaksiviga</value>
   </data>
-  <data name="FieldMustBeDataTypeTime" xml:space="preserve">
-    <value>Väli {0} peab olema kellaaeg.</value>
+  <data name="ViewModel_EmailRequired" xml:space="preserve">
+    <value>Email on nõutud!</value>
+  </data>
+  <data name="ViewModel_Password" xml:space="preserve">
+    <value>Parool</value>
+  </data>
+  <data name="ViewModel_PasswordLengthError" xml:space="preserve">
+    <value>{0} peab olema vähemalt {2} tähte pikk.</value>
+  </data>
+  <data name="ViewModel_PasswordRequired" xml:space="preserve">
+    <value>Parool on nõutud.</value>
+  </data>
+  <data name="ViewModel_RememberMe" xml:space="preserve">
+    <value>Pea mind meeles?</value>
+  </data>
+  <data name="ViewModel_UserName" xml:space="preserve">
+    <value>Kasutajanimi</value>
+  </data>
+  <data name="ViewModel_UserNameRequired" xml:space="preserve">
+    <value>Kasutajanimi on nõutud.</value>
   </data>
 </root>

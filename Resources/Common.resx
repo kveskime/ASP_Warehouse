@@ -117,35 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ApplicationName" xml:space="preserve">
-    <value>MyApplication</value>
+  <data name="English" xml:space="preserve">
+    <value>ENG</value>
   </data>
-  <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="Estonian" xml:space="preserve">
+    <value>EST</value>
   </data>
-  <data name="Login" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="LogOff" xml:space="preserve">
-    <value>Logg off</value>
-  </data>
-  <data name="ManageAccount" xml:space="preserve">
-    <value>Manage account</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>Next</value>
-  </data>
-  <data name="OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Previous</value>
-  </data>
-  <data name="Register" xml:space="preserve">
-    <value>Register</value>
-  </data>
-  <data name="Submit" xml:space="preserve">
-    <value>Submit</value>
+  <data name="FieldError" xml:space="preserve">
+    <value>Something went wrong inserting {0} field.</value>
   </data>
   <data name="FieldIsRequired" xml:space="preserve">
     <value>The {0} field is required.</value>
@@ -165,7 +144,13 @@
   <data name="FieldMustBeDataTypeTime" xml:space="preserve">
     <value>The field {0} must be a time.</value>
   </data>
-  <data name="SelectOptionLabel" xml:space="preserve">
-    <value>--- Select! ---</value>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="ManageAccount" xml:space="preserve">
+    <value>Manage account</value>
   </data>
 </root>

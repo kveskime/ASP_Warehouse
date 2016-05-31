@@ -263,6 +263,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductInWorksController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -1691,12 +1692,15 @@
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_ThemeLayout.cshtml" />
-    <Content Include="Views\Home\ThemeIndex.cshtml" />
+    <Content Include="Views\Home\PartialIndex.cshtml" />
+    <Content Include="Views\Home\LeftSidebar.cshtml" />
+    <Content Include="Views\Home\RightSidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Language\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -1707,6 +1711,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{c4539f16-6853-4dba-ae69-4e0d9b686605}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAnnotations\DataAnnotations.csproj">
+      <Project>{42a1912c-1bbb-497c-8d34-5fc3125fd384}</Project>
+      <Name>DataAnnotations</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{23ff86bc-85d0-418e-ab70-8ed53e7c926c}</Project>
@@ -1721,7 +1729,7 @@
       <Name>Identity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resources\Resources.csproj">
-      <Project>{4941dbcd-d597-4364-8152-25b629a0f832}</Project>
+      <Project>{2d218d85-28ef-44e6-aea6-6e0fae257dcb}</Project>
       <Name>Resources</Name>
     </ProjectReference>
   </ItemGroup>

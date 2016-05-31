@@ -30,22 +30,26 @@
                 </ul>
             </li>
             <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">
-                @Html.ActionLink("Est", "SetLanguage", new { area = "", controller = "Language", culture = "et", returnUrl }, htmlAttributes: new { id = "langLinkEst" })
+                @Html.ActionLink(@Resources.Common.Estonian, "SetLanguage", new { area = "", controller = "Language", culture = "et", returnUrl }, htmlAttributes: new { id = "langLinkEst" })
             </li>
             <li class="@Html.Raw(culture == "en" ? "list-group-item-success" : "")">
-                @Html.ActionLink("Eng", "SetLanguage", new { area = "", controller = "Language", culture = "en", returnUrl }, htmlAttributes: new { id = "langLinkEng" })
+                @Html.ActionLink(@Resources.Common.English, "SetLanguage", new { area = "", controller = "Language", culture = "en", returnUrl }, htmlAttributes: new { id = "langLinkEng" })
             </li>
         </ul>
     }
+}
+else if (!Request.IsAuthenticated)
+{
+    <li><a class="btn" href='@Url.Action("Login", "Account")'>Log IN</a></li>
 }
 else
 {
     <ul class="nav navbar-nav navbar-right">
         <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">
-            @Html.ActionLink("Est", "SetLanguage", new { area = "", controller = "Language", culture = "et", returnUrl }, htmlAttributes: new { id = "langLinkEst" })
+            @Html.ActionLink("Est", "SetLanguage", new {area = "", controller = "Language", culture = "et", returnUrl}, htmlAttributes: new {id = "langLinkEst"})
         </li>
         <li class="@Html.Raw(culture == "en" ? "list-group-item-success" : "")">
-            @Html.ActionLink("Eng", "SetLanguage", new { area = "", controller = "Language", culture = "en", returnUrl }, htmlAttributes: new { id = "langLinkEng" })
+            @Html.ActionLink("Eng", "SetLanguage", new {area = "", controller = "Language", culture = "en", returnUrl}, htmlAttributes: new {id = "langLinkEng"})
         </li>
     </ul>
 }

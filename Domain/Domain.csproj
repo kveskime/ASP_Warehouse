@@ -60,6 +60,7 @@
     <Compile Include="Identity\UserLogin.cs" />
     <Compile Include="Identity\UserRole.cs" />
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\MultiLangString.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductInPurchase.cs" />
     <Compile Include="Models\ProductInWarehouse.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Models\ProductType.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\Translation.cs" />
     <Compile Include="Models\Warehouse.cs" />
     <Compile Include="Models\WorkType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +76,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Resources\Resources.csproj">
+      <Project>{2d218d85-28ef-44e6-aea6-6e0fae257dcb}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
