@@ -3,7 +3,6 @@ using System.Web.Mvc;
 using ASPWarehouse;
 using Microsoft.Owin;
 using Owin;
-using ASPWarehouse.App_Start;
 using ASPWarehouse.Providers;
 using Domain.Identity;
 using Microsoft.AspNet.Identity;

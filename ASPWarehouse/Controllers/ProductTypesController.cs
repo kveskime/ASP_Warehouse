@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using ASPWarehouse.Helpers;
 using DAL;
 using DAL.Interfaces;
 using Domain;
@@ -13,7 +14,7 @@ using Domain.Models;
 
 namespace ASPWarehouse.Controllers
 {
-    public class ProductTypesController : Controller
+    public class ProductTypesController : BaseController
     {
         private readonly IPurchaseUOW _purchaseUow;
 
@@ -46,6 +47,8 @@ namespace ASPWarehouse.Controllers
         // GET: ProductTypes/Create
         public ActionResult Create()
         {
+            
+
             return View();
         }
 
@@ -58,6 +61,14 @@ namespace ASPWarehouse.Controllers
         {
             if (ModelState.IsValid)
             {
+                productType.ProductTypeDescription = new MultiLangString(productType.ProductTypeDescription.Value, CultureHelper.GetCurrentNeutralUICulture(), productType.ProductTypeDescription.Value);
+                //vm.Article.ArticleHeadline = new MultiLangString(vm.ArticleHeadline,
+                //        CultureHelper.GetCurrentNeutralUICulture(), vm.ArticleHeadline,
+                //        nameof(vm.Article) + "." + vm.Article.ArticleId + "." + nameof(vm.Article.ArticleHeadline));
+                //vm.Article.ArticleBody = new MultiLangString(vm.ArticleBody, CultureHelper.GetCurrentNeutralUICulture(),
+                //    vm.ArticleBody,
+                //    nameof(vm.Article) + "." + vm.Article.ArticleId + "." + nameof(vm.Article.ArticleBody));
+
                 _purchaseUow.ProductTypes.Add(productType);
                 _purchaseUow.Commit();
                 return RedirectToAction("Create", "Products");

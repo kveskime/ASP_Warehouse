@@ -61,11 +61,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Body.
+        /// </summary>
+        public static string ArticleBody {
+            get {
+                return ResourceManager.GetString("ArticleBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Headline.
+        /// </summary>
+        public static string ArticleHeadline {
+            get {
+                return ResourceManager.GetString("ArticleHeadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
         public static string EntityPrimaryKey {
             get {
                 return ResourceManager.GetString("EntityPrimaryKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string ProductTypeDescription {
+            get {
+                return ResourceManager.GetString("ProductTypeDescription", resourceCulture);
             }
         }
     }

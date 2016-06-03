@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.Linq;
@@ -11,10 +12,10 @@ using DataAnnotations;
 using DAL.EFConfiguration;
 using DAL.Helpers;
 using DAL.Interfaces;
-using DAL.Migrations;
 using Domain;
 using Domain.Identity;
 using Domain.Models;
+using Ninject;
 using NLog;
 
 namespace DAL
@@ -25,15 +26,16 @@ namespace DAL
         private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
         private readonly IUserNameResolver _userNameResolver;
+        [Inject]
         public WarehouseDbContext(IUserNameResolver userNameResolver, ILogger logger) : base("DbConnectionString")
         {
             _logger = logger;
             _userNameResolver = userNameResolver;
 
             _logger.Debug("InstanceId: " + _instanceId);
-
-            Database.SetInitializer(
-                new MigrateDatabaseToLatestVersion<WarehouseDbContext, MigrationConfiguration>());
+            Database.SetInitializer(new DatabaseInitializer());
+            //Database.SetInitializer(
+            //  new MigrateDatabaseToLatestVersion<WarehouseDbContext, MigrationConfiguration>());
 #if DEBUG
             Database.Log = s => Trace.Write(s);
 #endif
@@ -57,6 +59,8 @@ namespace DAL
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<WorkType> WorkTypes { get; set; }
 
+        public DbSet<Translation> Translations { get; set; }
+        public DbSet<Article> Articles { get; set; }
         public DbSet<RoleInt> RolesInt { get; set; }
         public DbSet<UserClaimInt> UserClaimsInt { get; set; }
         public DbSet<UserLoginInt> UserLoginsInt { get; set; }
@@ -65,6 +69,12 @@ namespace DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
+            // remove cascade delete
+            //modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+
             // Identity, PK - int 
             modelBuilder.Configurations.Add(new RoleIntMap());
             modelBuilder.Configurations.Add(new UserClaimIntMap());

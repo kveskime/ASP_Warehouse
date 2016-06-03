@@ -11,7 +11,7 @@ namespace ASPWarehouse.ViewModels
     public class ProductTypeCreateEditViewModel
     {
         public ProductType ProductType { get; set; }
-        public SelectList Products { get; set; }
+        
     }
 
     public class ProductCreateEditViewModel
@@ -22,7 +22,18 @@ namespace ASPWarehouse.ViewModels
         public MultiSelectList WorkMultiSelectList { get; set; }
         public int[] WarehouseIds { get; set; }
         public MultiSelectList WarehouseMultiSelectList { get; set; }
+        public SelectList TranslatedProductTypes { get; set; }
 
+    }
+
+    public class ProductsWarehouseCreateEditViewModel
+    {
+        public ProductInWarehouse ProductsInWarehouses { get; set; }
+        public int[] ProductIds { get; set; }
+        public MultiSelectList Products { get; set; }
+        public int[] WarehouseIds { get; set; }
+        public MultiSelectList WarehouseMultiSelectList { get; set; }
+        
 
     }
 

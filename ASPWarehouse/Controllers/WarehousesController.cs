@@ -14,7 +14,7 @@ using Domain.Models;
 
 namespace ASPWarehouse.Controllers
 {
-    public class WarehousesController : Controller
+    public class WarehousesController : BaseController
     {
         private readonly IWarehouseUOW _warehouseUow;
 
