@@ -46,6 +46,12 @@ namespace DAL
         public IWorkTypeRepository WorkTypes => GetRepo<IWorkTypeRepository>();
         public IProductInWarehouseRepository ProductInWarehouses => GetRepo<IProductInWarehouseRepository>();
         public IWarehouseRepository Warehouses => GetRepo<IWarehouseRepository>();
+        //articles
+        public IArticleRepository Articles => GetRepo<IArticleRepository>();
+
+        public IMultiLangStringRepository MultiLangStrings => GetRepo<IMultiLangStringRepository>();
+        public ITranslationRepository Translations => GetRepo<ITranslationRepository>();
+
 
         //Identity
         public IUserIntRepository UsersInt => GetRepo<IUserIntRepository>();

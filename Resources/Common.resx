@@ -153,6 +153,9 @@
   <data name="ManageAccount" xml:space="preserve">
     <value>Manage account</value>
   </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Elrongo</value>
+  </data>
   <data name="MainTagline" xml:space="preserve">
     <value>Manage your warehouse effeciently</value>
   </data>

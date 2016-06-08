@@ -4,17 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using ASPWarehouse;
+using ASPWarehouse.ViewModels;
 using Domain.Identity;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using NLog;
-using Web.ViewModels;
-using ASPWarehouse.Controllers;
-using ASPWarehouse.ViewModels;
 
-namespace Web.Controllers
+namespace ASPWarehouse.Controllers
 {
     [Authorize]
     public class AccountController : BaseController

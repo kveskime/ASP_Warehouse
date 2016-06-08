@@ -5,7 +5,7 @@ using ASPWarehouse.Helpers;
 
 namespace ASPWarehouse.Controllers
 {
-    public class LanguageController : Controller
+    public class LanguageController : BaseController
     {
         // GET: Language
         public ActionResult SetLanguage(string culture, string returnUrl)

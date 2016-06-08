@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using ASPWarehouse.Helpers;
 using ASPWarehouse.ViewModels;
 using DAL;
 using DAL.Interfaces;
@@ -14,7 +15,8 @@ using Domain.Models;
 
 namespace ASPWarehouse.Controllers
 {
-    public class ProductsController : Controller
+    [Authorize]
+    public class ProductsController : BaseController
     {
         private readonly IPurchaseUOW _purchaseUow;
         private readonly IWarehouseUOW _warehouseUow;
@@ -51,13 +53,13 @@ namespace ASPWarehouse.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            var vm = new ProductCreateEditViewModel()
-            {
-                ProductTypeSelectList = new SelectList(_purchaseUow.ProductTypes.All, "ProductTypeId", "Description"),
-                WorkMultiSelectList = new MultiSelectList(_warehouseUow.WorkTypes.All,"WorkTypeId","Description"),
-                WarehouseMultiSelectList = new MultiSelectList(_warehouseUow.Warehouses.All, "WarehouseId", "Description")
-            };
             
+
+                var vm = new ProductCreateEditViewModel()
+                {
+                    ProductTypeSelectList = new SelectList(_purchaseUow.ProductTypes.All, nameof(ProductType.ProductTypeDescriptionId), nameof(ProductType.ProductTypeDescription))
+                };
+            var x = vm;
             return View(vm);
         }
 
@@ -83,7 +85,7 @@ namespace ASPWarehouse.Controllers
                 return RedirectToAction("Index");
             }
             vm.WorkMultiSelectList = new MultiSelectList(_warehouseUow.WorkTypes.All, "WorkTypeId", "Description");
-            vm.ProductTypeSelectList= new SelectList(_purchaseUow.ProductTypes.All, "ProductTypeId", "Description");
+            vm.ProductTypeSelectList= new SelectList(_purchaseUow.ProductTypes.All.Select(a => a.ProductTypeDescription.Translations.Where(b=> b.Culture == CultureHelper.GetCurrentNeutralUICulture())), "ProductTypeId", "Description");
             vm.WarehouseMultiSelectList = new MultiSelectList(_warehouseUow.Warehouses.All, "WarehouseId", "Description");
 
             return View(vm);

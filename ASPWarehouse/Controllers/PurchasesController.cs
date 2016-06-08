@@ -14,7 +14,7 @@ using Domain.Models;
 
 namespace ASPWarehouse.Controllers
 {
-    public class PurchasesController : Controller
+    public class PurchasesController : BaseController
     {
         private readonly IPurchaseUOW _purchaseUow;
 
@@ -76,7 +76,6 @@ namespace ASPWarehouse.Controllers
 
                 return RedirectToAction("Index");
             }
-
             vm.SuppliersSelectList = new SelectList(_purchaseUow.Suppliers.All, "SupplierId", "Name", vm.Purchase.SupplierId);
             return View(vm);
         }

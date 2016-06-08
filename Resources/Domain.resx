@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ArticleBody" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="ArticleHeadline" xml:space="preserve">
+    <value>Headline</value>
+  </data>
   <data name="EntityPrimaryKey" xml:space="preserve">
     <value>Id</value>
+  </data>
+  <data name="ProductTypeDescription" xml:space="preserve">
+    <value>Description</value>
   </data>
 </root>

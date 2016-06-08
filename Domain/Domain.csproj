@@ -59,6 +59,7 @@
     <Compile Include="Identity\UserClaim.cs" />
     <Compile Include="Identity\UserLogin.cs" />
     <Compile Include="Identity\UserRole.cs" />
+    <Compile Include="Models\Article.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\MultiLangString.cs" />
     <Compile Include="Models\Product.cs" />
@@ -75,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
