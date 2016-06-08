@@ -160,11 +160,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manage your warehouse effeciently.
+        /// </summary>
+        public static string MainTagline {
+            get {
+                return ResourceManager.GetString("MainTagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DEPRESSING, MUNDANE AND REPETETIVE?.
+        /// </summary>
+        public static string MainTitle {
+            get {
+                return ResourceManager.GetString("MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Manage account.
         /// </summary>
         public static string ManageAccount {
             get {
                 return ResourceManager.GetString("ManageAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
             }
         }
     }

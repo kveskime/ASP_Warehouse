@@ -153,4 +153,13 @@
   <data name="ManageAccount" xml:space="preserve">
     <value>Manage account</value>
   </data>
+  <data name="MainTagline" xml:space="preserve">
+    <value>Manage your warehouse effeciently</value>
+  </data>
+  <data name="MainTitle" xml:space="preserve">
+    <value>DEPRESSING, MUNDANE AND REPETETIVE?</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
 </root>
