@@ -29,58 +29,11 @@ namespace DAL
             base.Seed(context);
         }
 
-        //private void SeedTypes(WarehouseDbContext context)
-        //{
-
-
-        //    var gameType2 = new GameType()
-        //    {
-        //        Name = "Gentleman with blinds"
-        //    };
-        //    context.GameTypes.Add(gameType2);
-        //    context.SaveChanges();
-
-        //    ToDo: Translations gametype nimedele ka?
-        //    ToDo: Lisada gametypeidele descriptionid ja translationsid.
-
-        //    var setValue = 7;
-        //    var rightWay = false;
-        //    for (int i = 1; i < 15; i++)
-        //    {
-        //        var gamerowtype = new GameRowType()
-        //        {
-        //            GameType = gameType,
-        //            SortOrder = i,
-        //            Description = setValue.ToString()
-        //        };
-
-        //        context.GameRowTypes.Add(gamerowtype);
-        //        context.SaveChanges();
-
-        //        var gamerowtype2 = new GameRowType()
-        //        {
-        //            GameType = gameType2,
-        //            SortOrder = i,
-        //            Description = setValue.ToString()
-        //        };
-
-        //        context.GameRowTypes.Add(gamerowtype2);
-        //        context.SaveChanges();
-
-        //        if (setValue == 1 && !rightWay)
-        //        {
-        //            rightWay = true;
-        //            continue;
-        //        }
-        //        setValue = rightWay ? setValue + 1 : setValue - 1;
-        //    }
-        //}
 
         private void SeedArticles(WarehouseDbContext context)
         {
-            var articleHeadLine = "Gentleman score saver";
-            var articleBody =
-                "save scores and see statistics";
+            var articleHeadLine = "The fastest way to a clean looking warehouse";
+            var articleBody = "Use our software to make your data <subscript>problems</subscript> disappear";
             var article = new Article()
             {
                 ArticleName = "HomeIndex",
@@ -92,14 +45,14 @@ namespace DAL
             
             context.Translations.Add(new Translation()
             {
-                Value = "Gentleman punktiarvestussüsteem",
+                Value = "Kiireim viis hallatava laohoonesüsteemini",
                 Culture = "et",
                 MultiLangString = article.ArticleHeadline
             });
 
             context.Translations.Add(new Translation()
             {
-                Value = "salvesta punkte ja vaata statistikat",
+                Value = "Kasuta meie tarkvara, et oma andmed maagiliselt ümberkorraldada",
                 Culture = "et",
                 MultiLangString = article.ArticleBody
             });

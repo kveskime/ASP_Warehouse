@@ -40,7 +40,16 @@
 }
 else if (!Request.IsAuthenticated)
 {
-    <li><a class="btn" href='@Url.Action("Login", "Account")'>Log IN</a></li>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="btn" href='@Url.Action("Login", "Account")'>Log IN</a></li>
+
+        <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">
+            @Html.ActionLink("Est", "SetLanguage", new {area = "", controller = "Language", culture = "et", returnUrl}, htmlAttributes: new {id = "langLinkEst"})
+        </li>
+        <li class="@Html.Raw(culture == "en" ? "list-group-item-success" : "")">
+            @Html.ActionLink("Eng", "SetLanguage", new {area = "", controller = "Language", culture = "en", returnUrl}, htmlAttributes: new {id = "langLinkEng"})
+        </li>
+    </ul>
 }
 else
 {
